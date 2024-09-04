@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Panel de Administrador</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#lotes">Información por Lotes</a></li>
+            <li><a href="#historial">Historial de Cambios</a></li>
+            <li><a href="#usuarios">Gestión de Usuarios</a></li>
+            <li><a href="#recepcion-leche">Recepción de Leche</a></li>
+            <li><a href="#empaque-paletizado">Empaque/Paletizado</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="lotes">
+            <h2>Información por Lotes</h2>
+            <form>
+                <label for="lote-id">ID de Lote:</label>
+                <input type="text" id="lote-id" name="lote-id">
+
+                <label for="fecha-recepcion">Fecha de Recepción:</label>
+                <input type="datetime-local" id="fecha-recepcion" name="fecha-recepcion">
+
+                <label for="trabajador-id">ID de Trabajador:</label>
+                <input type="text" id="trabajador-id" name="trabajador-id">
+
+                <label for="finca-id">ID de Finca:</label>
+                <input type="text" id="finca-id" name="finca-id">
+
+                <label for="tipo-leche">Tipo de Leche:</label>
+                <input type="text" id="tipo-leche" name="tipo-leche">
+
+                <label for="cantidad">Cantidad/Volumen:</label>
+                <input type="number" id="cantidad" name="cantidad">
+
+                <label for="analisis-ph">Medición pH:</label>
+                <input type="number" step="0.01" id="analisis-ph" name="analisis-ph">
+
+                <label for="analisis-temp">Medición Temperatura:</label>
+                <input type="number" step="0.1" id="analisis-temp" name="analisis-temp">
+
+                <label for="analisis-vol">Medición Volumen:</label>
+                <input type="number" id="analisis-vol" name="analisis-vol">
+
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section id="recepcion-leche">
+            <h2>Recepción de Leche</h2>
+            <form>
+                <label for="fecha-recepcion">Fecha de Recepción:</label>
+                <input type="datetime-local" id="fecha-recepcion" name="fecha-recepcion">
+        
+                <label for="trabajador-id-recepcion">ID de Trabajador:</label>
+                <input type="text" id="trabajador-id-recepcion" name="trabajador-id-recepcion">
+        
+                <label for="nombre-trabajador-recepcion">Nombre del Trabajador:</label>
+                <input type="text" id="nombre-trabajador-recepcion" name="nombre-trabajador-recepcion">
+        
+                <label for="finca-id-recepcion">ID de Finca:</label>
+                <input type="text" id="finca-id-recepcion" name="finca-id-recepcion">
+        
+                <label for="nombre-finca-recepcion">Nombre de Finca:</label>
+                <input type="text" id="nombre-finca-recepcion" name="nombre-finca-recepcion">
+        
+                <label for="ubicacion-finca-recepcion">Ubicación de Finca:</label>
+                <input type="text" id="ubicacion-finca-recepcion" name="ubicacion-finca-recepcion">
+        
+                <label for="lote-leche-recepcion">ID Lote de Leche:</label>
+                <input type="text" id="lote-leche-recepcion" name="lote-leche-recepcion">
+        
+                <label for="tipo-leche-recepcion">Tipo de Leche:</label>
+                <input type="text" id="tipo-leche-recepcion" name="tipo-leche-recepcion">
+        
+                <label for="cantidad-recepcion">Cantidad/Volumen:</label>
+                <input type="number" id="cantidad-recepcion" name="cantidad-recepcion">
+        
+                <label for="fecha-analisis">Fecha de Análisis:</label>
+                <input type="datetime-local" id="fecha-analisis" name="fecha-analisis">
+        
+                <label for="trabajador-id-analisis">ID de Trabajador (Análisis):</label>
+                <input type="text" id="trabajador-id-analisis" name="trabajador-id-analisis">
+        
+                <label for="nombre-trabajador-analisis">Nombre del Trabajador (Análisis):</label>
+                <input type="text" id="nombre-trabajador-analisis" name="nombre-trabajador-analisis">
+        
+                <label for="lote-leche-analisis">ID Lote de Leche (Análisis):</label>
+                <input type="text" id="lote-leche-analisis" name="lote-leche-analisis">
+        
+                <label for="ph-analisis">Medición pH:</label>
+                <input type="number" step="0.01" id="ph-analisis" name="ph-analisis">
+        
+                <label for="temp-analisis">Medición Temperatura:</label>
+                <input type="number" step="0.1" id="temp-analisis" name="temp-analisis">
+        
+                <label for="vol-analisis">Medición Volumen:</label>
+                <input type="number" id="vol-analisis" name="vol-analisis">
+        
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section id="empaque-paletizado">
+            <h2>Empaque/Paletizado</h2>
+            <form>
+                <label for="fecha-finalizacion">Fecha de Finalización:</label>
+                <input type="datetime-local" id="fecha-finalizacion" name="fecha-finalizacion">
+        
+                <label for="trabajador-id-empaque">ID de Trabajador:</label>
+                <input type="text" id="trabajador-id-empaque" name="trabajador-id-empaque">
+        
+                <label for="nombre-trabajador-empaque">Nombre del Trabajador:</label>
+                <input type="text" id="nombre-trabajador-empaque" name="nombre-trabajador-empaque">
+        
+                <label for="lote-quesos">Lote de los Quesos:</label>
+                <input type="text" id="lote-quesos" name="lote-quesos">
+        
+                <label for="cantidad-unidades">Cantidad de Unidades:</label>
+                <input type="number" id="cantidad-unidades" name="cantidad-unidades">
+        
+                <label for="nombre-producto">Nombre del Producto:</label>
+                <input type="text" id="nombre-producto" name="nombre-producto">
+        
+                <label for="tipo-producto">Tipo de Producto:</label>
+                <input type="text" id="tipo-producto" name="tipo-producto">
+        
+                <label for="masa-volumen-producto">Masa/Volumen del Producto:</label>
+                <input type="text" id="masa-volumen-producto" name="masa-volumen-producto">
+        
+                <label for="descripcion-producto">Descripción del Producto:</label>
+                <textarea id="descripcion-producto" name="descripcion-producto"></textarea>
+        
+                <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+                <input type="date" id="fecha-vencimiento" name="fecha-vencimiento">
+        
+                <label for="lista-ingredientes">Lista de Ingredientes:</label>
+                <textarea id="lista-ingredientes" name="lista-ingredientes"></textarea>
+        
+                <label for="origen-leche">Origen de la Leche:</label>
+                <textarea id="origen-leche" name="origen-leche"></textarea>
+        
+                <label for="id-planta">ID Planta de Queso:</label>
+                <input type="text" id="id-planta" name="id-planta">
+        
+                <label for="nombre-planta">Nombre de la Planta:</label>
+                <input type="text" id="nombre-planta" name="nombre-planta">
+        
+                <label for="ubicacion-planta">Ubicación de la Planta:</label>
+                <input type="text" id="ubicacion-planta" name="ubicacion-planta">
+        
+                <label for="contacto-planta">Información de Contacto:</label>
+                <input type="text" id="contacto-planta" name="contacto-planta">
+        
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section id="historial">
+            <h2>Historial de Cambios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID de Lote</th>
+                        <th>Fecha de Cambio</th>
+                        <th>Campo Modificado</th>
+                        <th>Valor Anterior</th>
+                        <th>Nuevo Valor</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenará con datos del historial -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="usuarios">
+            <h2>Gestión de Usuarios</h2>
+            <form>
+                <label for="usuario-id">ID de Usuario:</label>
+                <input type="text" id="usuario-id" name="usuario-id">
+
+                <label for="nombre-usuario">Nombre de Usuario:</label>
+                <input type="text" id="nombre-usuario" name="nombre-usuario">
+
+                <label for="rol-usuario">Rol de Usuario:</label>
+                <select id="rol-usuario" name="rol-usuario">
+                    <option value="empleado">Empleado</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+
+                <button type="submit">Crear/Actualizar Usuario</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

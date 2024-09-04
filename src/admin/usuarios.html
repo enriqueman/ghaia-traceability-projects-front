@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Panel de Administrador</h1>
+            <div class="user-info">
+                <p>Usuario: example@dominio.com</p>
+                <p id="current-date"></p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Información por Lotes</a></li>
+            <li><a href="etapas.html">Recepción de Leche y Empaque/Paletizado</a></li>
+            <li><a href="historial.html">Historial de Cambios</a></li>
+            <li><a href="usuarios.html" class="active">Gestión de Usuarios</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="usuarios">
+            <h2>Gestión de Usuarios</h2>
+            <form>
+                <label for="usuario-id">ID de Usuario:</label>
+                <input type="text" id="usuario-id" name="usuario-id">
+        
+                <label for="nombre-usuario">Nombre de Usuario:</label>
+                <input type="text" id="nombre-usuario" name="nombre-usuario">
+        
+                <label for="rol-usuario">Rol de Usuario:</label>
+                <select id="rol-usuario" name="rol-usuario">
+                    <option value="empleado">Empleado</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+        
+                <button type="submit">Crear/Actualizar Usuario</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
