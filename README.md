@@ -1,13 +1,13 @@
-## Vista informacion lote
-![alt text](src/admin/vistas/Informacion.png)
+## Vista home
+![alt text](src/admin/vistas/home.png)
 
-## Vista etapas
+## Vista lotes
 se mira asi para poder mostrar todo el contenido es el zoom 
-![alt text](src/admin/vistas/etapas.png)
-![alt text](src/admin/vistas/etapas2.png)
+![alt text](src/admin/vistas/lotes.png)
+![alt text](src/admin/vistas/lotes2.png)
 
 ## Vista historial
-![alt text](src/admin/vistas/historial.png)
+![alt text](src/admin/vistas/Historial.png)
 
 ## Vista usuarios
 ![alt text](src/admin/vistas/usuarios.png)
