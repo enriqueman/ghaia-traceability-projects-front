@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla de Administrador</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesadmin.css">
 </head>
 
 <body>
     <header>
-        <h1>Panel de Administrador</h1>
+        <div class="header-content">
+            <h1>Panel de Administrador</h1>
+            <div class="user-info">
+                <p>Usuario: example@dominio.com</p>
+                <p id="current-date"></p>
+            </div>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#lotes">Información por Lotes</a></li>
-            <li><a href="#historial">Historial de Cambios</a></li>
-            <li><a href="#usuarios">Gestión de Usuarios</a></li>
-            <li><a href="#recepcion-leche">Recepción de Leche</a></li>
-            <li><a href="#empaque-paletizado">Empaque/Paletizado</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="admin.html" class="active">Consultar lote</a></li>
+                
+                <ol >
+                    <li><a href="#lotes">Información Lote</a></li>
+                    <li><a href="#recepcion-leche">Recepción de Leche</a></li>
+                    <li><a href="#Analisis">Analisis</a></li>
+                    <li><a href="#empaque-paletizado">Empaque/Paletizado</a></li>
+
+                </ol>
+                <li><a href="usuarios.html">Gestión de Usuarios</a></li>
+                <li><a href="historial.html">Historial de Cambios</a></li>
+            </ul>
+        </nav>
     <main>
         <section id="lotes">
-            <h2>Información por Lotes</h2>
+
+            <div class="selectors">
+                <select id="fabrica-selector">
+                    <option value="fabrica1">Fábrica 1</option>
+                    <option value="fabrica2">Fábrica 2</option>
+                    <option value="fabrica3">Fábrica 3</option>
+                </select>
+                <select id="lote-selector">
+                    <option value="lote1">Lote 1</option>
+                    <option value="lote2">Lote 2</option>
+                    <option value="lote3">Lote 3</option>
+                </select>
+            </div>
+
+            <h2>Información Lote</h2>
+            <button class="accordion-toggle small-right">Toggle</button>
+            <div class="accordion-content">
+
             <form>
                 <label for="lote-id">ID de Lote:</label>
                 <input type="text" id="lote-id" name="lote-id">
@@ -31,33 +61,23 @@
                 <label for="fecha-recepcion">Fecha de Recepción:</label>
                 <input type="datetime-local" id="fecha-recepcion" name="fecha-recepcion">
 
-                <label for="trabajador-id">ID de Trabajador:</label>
+                <label for="trabajador-id">Cantidad</label>
                 <input type="text" id="trabajador-id" name="trabajador-id">
 
-                <label for="finca-id">ID de Finca:</label>
+                <label for="finca-id">Planta:</label>
                 <input type="text" id="finca-id" name="finca-id">
 
-                <label for="tipo-leche">Tipo de Leche:</label>
-                <input type="text" id="tipo-leche" name="tipo-leche">
-
-                <label for="cantidad">Cantidad/Volumen:</label>
-                <input type="number" id="cantidad" name="cantidad">
-
-                <label for="analisis-ph">Medición pH:</label>
-                <input type="number" step="0.01" id="analisis-ph" name="analisis-ph">
-
-                <label for="analisis-temp">Medición Temperatura:</label>
-                <input type="number" step="0.1" id="analisis-temp" name="analisis-temp">
-
-                <label for="analisis-vol">Medición Volumen:</label>
-                <input type="number" id="analisis-vol" name="analisis-vol">
 
                 <button type="submit">Guardar</button>
             </form>
+        </div>
         </section>
 
         <section id="recepcion-leche">
             <h2>Recepción de Leche</h2>
+            <button class="accordion-toggle small-right">Toggle</button>
+            <div class="accordion-content">
+
             <form>
                 <label for="fecha-recepcion">Fecha de Recepción:</label>
                 <input type="datetime-local" id="fecha-recepcion" name="fecha-recepcion">
@@ -86,6 +106,16 @@
                 <label for="cantidad-recepcion">Cantidad/Volumen:</label>
                 <input type="number" id="cantidad-recepcion" name="cantidad-recepcion">
         
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+        </section>
+
+        <section id="Analisis">
+            <h2>Analisis</h2>
+            <button class="accordion-toggle small-right">Toggle</button>
+            <div class="accordion-content">
+            <form>
                 <label for="fecha-analisis">Fecha de Análisis:</label>
                 <input type="datetime-local" id="fecha-analisis" name="fecha-analisis">
         
@@ -109,10 +139,14 @@
         
                 <button type="submit">Guardar</button>
             </form>
+        </div>
+
         </section>
 
         <section id="empaque-paletizado">
             <h2>Empaque/Paletizado</h2>
+            <button class="accordion-toggle small-right">Toggle</button>
+            <div class="accordion-content">
             <form>
                 <label for="fecha-finalizacion">Fecha de Finalización:</label>
                 <input type="datetime-local" id="fecha-finalizacion" name="fecha-finalizacion">
@@ -164,47 +198,28 @@
         
                 <button type="submit">Guardar</button>
             </form>
+        </div>   
         </section>
 
-        <section id="historial">
-            <h2>Historial de Cambios</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID de Lote</th>
-                        <th>Fecha de Cambio</th>
-                        <th>Campo Modificado</th>
-                        <th>Valor Anterior</th>
-                        <th>Nuevo Valor</th>
-                        <th>Usuario</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Aquí se llenará con datos del historial -->
-                </tbody>
-            </table>
-        </section>
-
-        <section id="usuarios">
-            <h2>Gestión de Usuarios</h2>
-            <form>
-                <label for="usuario-id">ID de Usuario:</label>
-                <input type="text" id="usuario-id" name="usuario-id">
-
-                <label for="nombre-usuario">Nombre de Usuario:</label>
-                <input type="text" id="nombre-usuario" name="nombre-usuario">
-
-                <label for="rol-usuario">Rol de Usuario:</label>
-                <select id="rol-usuario" name="rol-usuario">
-                    <option value="empleado">Empleado</option>
-                    <option value="supervisor">Supervisor</option>
-                    <option value="administrador">Administrador</option>
-                </select>
-
-                <button type="submit">Crear/Actualizar Usuario</button>
-            </form>
-        </section>
     </main>
+    <script>
+        // Script para mostrar la fecha actual
+        document.getElementById('current-date').textContent = new Date().toLocaleString();
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggles = document.querySelectorAll('.accordion-toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          content.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Usuarios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesusers.css">
 </head>
 
 <body>
@@ -18,35 +18,56 @@
             </div>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Información por Lotes</a></li>
-            <li><a href="etapas.html">Recepción de Leche y Empaque/Paletizado</a></li>
-            <li><a href="historial.html">Historial de Cambios</a></li>
-            <li><a href="usuarios.html" class="active">Gestión de Usuarios</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="usuarios">
-            <h2>Gestión de Usuarios</h2>
-            <form>
-                <label for="usuario-id">ID de Usuario:</label>
-                <input type="text" id="usuario-id" name="usuario-id">
-        
-                <label for="nombre-usuario">Nombre de Usuario:</label>
-                <input type="text" id="nombre-usuario" name="nombre-usuario">
-        
-                <label for="rol-usuario">Rol de Usuario:</label>
-                <select id="rol-usuario" name="rol-usuario">
-                    <option value="empleado">Empleado</option>
-                    <option value="supervisor">Supervisor</option>
-                    <option value="administrador">Administrador</option>
-                </select>
-        
-                <button type="submit">Crear/Actualizar Usuario</button>
-            </form>
-        </section>
-    </main>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="admin.html">Información por Lotes</a></li>
+                <!-- <li><a href="etapas.html">Recepción de Leche y Empaque/Paletizado</a></li> -->
+                <li><a href="historial.html">Historial de Cambios</a></li>
+                <li><a href="usuarios.html" class="active">Gestión de Usuarios</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="usuarios">
+                <h2>Gestión de Usuarios</h2>
+                <form>
+                    <label for="usuario-id">ID de Usuario:</label>
+                    <input type="text" id="usuario-id" name="usuario-id">
+            
+                    <label for="nombre-usuario">Nombre de Usuario:</label>
+                    <input type="text" id="nombre-usuario" name="nombre-usuario">
+            
+                    <label for="rol-usuario">Rol de Usuario:</label>
+                    <select id="rol-usuario" name="rol-usuario">
+                        <option value="empleado">Empleado</option>
+                        <option value="supervisor">Supervisor</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+
+                    <label for="privilegios-usuario">Privilegios:</label>
+                    <select id="privilegios-usuario" name="privilegios-usuario">
+                        <option value="administrador">Administrador</option>
+                        <option value="empleado-etapa-1">Empleado Etapa 1</option>
+                        <option value="empleado-etapa-2">Empleado Etapa 2</option>
+                        <option value="empleado-etapa-3">Empleado Etapa 3</option>
+                        <option value="distribuidor">Distribuidor</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="planta-usuario">Planta:</label>
+                    <input type="text" id="planta-usuario" name="planta-usuario">
+            
+                    <button type="submit">Crear/Actualizar Usuario</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Script para mostrar la fecha actual
+        document.getElementById("current-date").textContent =
+            new Date().toLocaleString();
+    </script>
 </body>
 
 </html>

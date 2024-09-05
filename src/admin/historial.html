@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Cambios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleshistory.css">
 </head>
 
 <body>
@@ -18,34 +18,42 @@
             </div>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Información por Lotes</a></li>
-            <li><a href="etapas.html">Recepción de Leche y Empaque/Paletizado</a></li>
-            <li><a href="historial.html" class="active">Historial de Cambios</a></li>
-            <li><a href="usuarios.html">Gestión de Usuarios</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="historial">
-            <h2>Historial de Cambios</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID de Lote</th>
-                        <th>Fecha de Cambio</th>
-                        <th>Campo Modificado</th>
-                        <th>Valor Anterior</th>
-                        <th>Nuevo Valor</th>
-                        <th>Usuario</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Aquí se llenará con datos del historial -->
-                </tbody>
-            </table>
-        </section>
-    </main>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="admin.html">Información por Lotes</a></li>
+                <!-- <li><a href="etapas.html">Recepción de Leche y Empaque/Paletizado</a></li> -->
+                <li><a href="historial.html" class="active">Historial de Cambios</a></li>
+                <li><a href="usuarios.html">Gestión de Usuarios</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="historial">
+                <h2>Historial de Cambios</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID de Lote</th>
+                            <th>Fecha de Cambio</th>
+                            <th>Campo Modificado</th>
+                            <th>Valor Anterior</th>
+                            <th>Nuevo Valor</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se llenará con datos del historial -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Script para mostrar la fecha actual
+        document.getElementById("current-date").textContent =
+            new Date().toLocaleString();
+    </script>
 </body>
 
 </html>

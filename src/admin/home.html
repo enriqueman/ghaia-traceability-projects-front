@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styleshome.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Panel de Administrador</h1>
+        <div class="user-info">
+          <p>Usuario: example@dominio.com</p>
+          <p id="current-date"></p>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <nav class="sidebar">
+        <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="admin.html">Información por Lotes</a></li>
+          <!-- <li><a href="etapas.html">Recepción de Leche y Empaque/Paletizado</a></li> -->
+          <li><a href="historial.html">Historial de Cambios</a></li>
+          <li><a href="usuarios.html">Gestión de Usuarios</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="fabrica">
+          <h2>Fábricas de Queso</h2>
+          <button class="accordion-toggle small-right">Toggle</button>
+          <div class="accordion-content">
+            <div class="selectors">
+              <select id="fabrica-selector">
+                <option value="fabrica1">Fábrica 1</option>
+                <option value="fabrica2">Fábrica 2</option>
+                <option value="fabrica3">Fábrica 3</option>
+              </select>
+              <select id="lote-selector">
+                <option value="lote1">Lote 1</option>
+                <option value="lote2">Lote 2</option>
+                <option value="lote3">Lote 3</option>
+              </select>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Dirección</th>
+                  <th>Número Responsable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Aquí se llenará con datos de las fábricas -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="lotes">
+          <h2>Lotes de Queso</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID Lote</th>
+                <th>Fecha de Producción</th>
+                <th>Tipo de Queso</th>
+                <th>Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aquí se llenará con datos de los lotes -->
+            </tbody>
+          </table>
+        </section>
+
+        <section id="empleados">
+          <h2>Empleados</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aquí se llenará con datos de los empleados -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script>
+      // Script para mostrar la fecha actual
+      document.getElementById("current-date").textContent =
+        new Date().toLocaleString();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const toggles = document.querySelectorAll('.accordion-toggle');
+        toggles.forEach(toggle => {
+          toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
