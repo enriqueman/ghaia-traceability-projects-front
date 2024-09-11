@@ -14,3 +14,6 @@ se mira asi para poder mostrar todo el contenido es el zoom
 
 ## Vista login
 ![alt text](src/admin/vistas/login.png)
+
+## Vista Producto
+![alt text](src/admin/vistas/producto.png)
